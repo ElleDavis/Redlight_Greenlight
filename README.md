@@ -1,4 +1,12 @@
-#RedLight GreenLight
+#RedLight GreenLight needs
+Wireframe
+Explanations of specific Technologies 
+Approach Taken
+Unsolved Problems
+Link to Hosted Site
+Installation Instructions
+
+Instructions on HOW TO PLAY :)
 ## Instructions
 Player 1 starts
 circle Elements display flashing color array
@@ -8,7 +16,9 @@ Player 2 starts
 
 ## Resources: 
 
-https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/
-
+freecodeCamp
+codeacademy
+stackoverflow
+W3Schools
 
 ###Wireframe

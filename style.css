@@ -1,34 +1,63 @@
 body{
     background-color: cadetblue;
     border: 5px solid black;
+    background-image: url(redLight_Images/magnezis-magnestic-KUQEo74BgPs-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: monospace;
 }
 
 div{
     width: 300px;
     border: 15px solid green;
-    padding: 50px;
+    padding: auto;
     margin: auto;
     
     
 }
+#reset, #go{
+    color:white;
+    background-color:rgba(1, 129, 230, .7);
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: larger;
+    font-family: monospace;
+    /* align-content: space-between;
+    justify-content: space-between; */
 
+}
+
+#reset:hover{
+    background-color: red;
+}
+
+#go:hover{
+    background-color: green;
+}
+
+#lights, 
 #buttons{
     border: 5px solid blue;
-    align-items: center;
+    display: flex;
+    align-content:space-around;
+    justify-content: center;
     margin: auto;
-    width: 75%;
-    padding: 10px;
+    width: auto;
+    padding: auto;
+    margin:auto;
 }
 
 #lights{
     background-color:#FFDB58 ;
-    border: 5px solid red;
-    width: 55%;
-    height:auto;
-    padding: 20px;
-    margin: 20px;
+    border: 15px solid black;
+    width: 30vw;
+    height:70vh;
+    padding: auto;
+    margin: auto;
     display:flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
