@@ -66,7 +66,7 @@ div{
     width: 100px;
     height: 100px;
     /* background-color: blueviolet; */
-    animation:blink 600ms infinite alternate;
+    animation:blink 200ms infinite alternate;
 }
 
 /* .blink{

@@ -8,62 +8,74 @@ const colors=[
 ]
 console.log(colors)
 
-//Go Button
-function goPressed(){
-    console.log("go clicked")
-}
 
+//Go Button starts the scoreboard
+function goPressed(){
+    c1.textContent="Go!"
+       // c1.textContent=`${(colors[Math.floor(Math.random()* colors.length)])}`
+        //c1.textContent=`${pointContainer}`
+     // if (c1.value=" "){
+        // c1.textContent=`${(colors[Math.floor(Math.random()* colors.length)])}`
+        // return;
+    // } else console.log("game already Started")
+    //Scoreboard opens when go is clicked
+    let showScoreBoard=document.querySelector("#scoreBoard")
+    scoreBoard.textContent="scores:";
+     //Speeding tix opens when go is clicked
+    let speedingTicket=document.querySelector("#speedingTicket")
+    speedingTicket.textContent="speeding Tickets:"
+}
 
 //Reset Button
 function resetPressed(){
+   // gets button from html
+    const reset = document.getElementById('reset')
+    c1.textContent=""
     console.log("resetting game")
 }
 
-//cirle clicks
-function circleClicked(){
-     //loop through colors on click
-     for (let i=0; i<colors.length; i++)
-     //get random color from color array
+//colors loop when circle is clicked
+    function circleClicked(){
+    ColorArray= c1.textContent=`${(colors[Math.floor(Math.random()* colors.length)])}`
+    let circleColored =setInterval(function(){c1.innerHTML +=`${(colors[Math.floor(Math.random()* colors.length)])}`}, 3000);
+    }
+//add points to scorboard when circle clicked on green Scores ++, when clicked on anything else speading ticket++
+    // let pointContainer = document.querySelector(".points");
+    // pointContainer.textContent="points showing up "
+    // let value = 0;
+
+//     let pointContainer = document.getElementsByClassName("points"),
+//     value = 0;
+//     pointContainer = function() {
+//         value += 1;
+//         c1.innerHTML =  `${value}`;
+//   };
+
+//add points to the score counter or speeding tickets
+    let value = 0;
+    let pointContainer = document.querySelector("#scoreBoard");
+    function counter(){
+    // if (`${(colors[Math.floor(Math.random()* colors.length)])}` === colors['green']){
+        if(c1.innerHTML === "green"){  
+     value +=1
+    pointContainer.textContent= Number(value) +1
+    } else {speedingTicket += "X"}
      console.log(colors[Math.floor(Math.random()* colors.length)])
-}
- //display value of color in the circles (event.target) 
-    // let circleColored=document.querySelectorAll(".circle")
-    // c1.innerHTML= `${circleClicked}`
- 
-//The setInterval() method repeats a given function at every given time-interval.
-
-// create Scoreboard
-    // function scores(){
-    //     let scoreBoard=document.getElementById("scoreboard")
-    //     scoreBoard.innerHTML="scores:"
-    // }
-    // console.log(scores)
-
-//create counter
-    // function counter(){
-    // for (let i=0;i === "green";i++ )
-    // }
-
-// create color function to flash colors in circle
-// function taking each circle, displays an array of colors on a timer
-// circles are events based on click 
-    // let circle1=document.querySelector("#c1")
-    
-    // let circle2=document.querySelector("#c2")
-
-    // let circle3=document.querySelector("#c3")
-    // circle3.addEventListener("click", colors)
-
-    // let lightsDiv=document.querySelector("#lights")
-    // circle1Div.addEventListener("click", function(){
-    //     lightsDiv.innerHTML="show me colors"
-    // })
+    }
 
 
-//     //click go button and start color array
-//     const goButton= document.getElementById("go")
-//     goButton.addEventListener("click", )
-//     alert("button was clicked");
+//start Player2 starts when player 1 gets 3 speeding tickets
+    // if(speedingTicket ==="XXX"){alert(Player 2 start) }
 
-  
-// if color green score increased by 1 else 0 
+
+//click reset button and remove colors from c1
+    const resetButton=document.getElementById("reset")
+    resetButton.addEventListener("click",resetPressed)
+    console.log("game resetting");
+
+//click go button and start color array
+    const goButton= document.getElementById("go")
+    goButton.addEventListener("click", goPressed)
+    console.log("go was clicked");
+
+   
