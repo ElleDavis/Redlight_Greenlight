@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="red_green.js"></script>
+    <script src="red_green.js" defer></script>
     <link rel="stylesheet" href="style.css"> 
     <title>🔴🟢🟡</title>
 </head>
@@ -12,17 +12,29 @@
     
     <div id="title">
         <h1> Redlight GreenLight</h1> 
-       <h2 id="scoreBoard" class="points" ></h2>
-       <h2 id="speedingTicket"></h2>
+       
+        <h2> The Current Player is: <span id="currentPlayer">1</span></h2>
+       
+        <div id="total">
+       <h2 id="add" class="player1points" class="player2points"></h2>
+       </div>
+      
+       <div>
+        <h2 id="speedingTicket" class="player1tix" class="player2tix"></h2>
+       </div>
+      
     </div>
+    
 
     <div id="buttons">
         <button id="go" onclick="goPressed()" > Go!</button>
+        <button id="greenLight" onclick="greenPressed()" > GreenLight</button>
         <button id="reset" onclick="resetPressed()" > Reset</button>
     </div>
 
     <div id="lights">
-        <button class="circle" id="c1" onclick="circleClicked()"></button>
+        <button class="circle" id="c1" ></button>
+        <!-- onclick="circleClicked()" -->
         <!-- <input type="button" class="circle" id="c2" onclick="circleClicked()" />
         <input type="button" class="circle" id="c3" onclick="circleClicked()" />  -->
     </div>

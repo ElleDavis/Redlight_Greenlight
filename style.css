@@ -16,15 +16,14 @@ div{
     
     
 }
-#reset, #go{
+#reset, #go, #greenLight{
     color:white;
     background-color:rgba(1, 129, 230, .7);
     padding: 15px 20px;
     border-radius: 15px;
     font-size: larger;
     font-family: monospace;
-    /* align-content: space-between;
-    justify-content: space-between; */
+   
 
 }
 
@@ -36,17 +35,23 @@ div{
     background-color: green;
 }
 
+/* <img src="./redLight_Images/checkerboard.png" /> */
+#greenLight:hover{
+    background-color: green;
+}
+
 #lights, 
 #buttons{
     border: 5px solid blue;
     display: flex;
     align-content:space-around;
     justify-content: center;
-    margin: auto;
     width: auto;
     padding: auto;
     margin:auto;
 }
+
+ 
 
 #lights{
     background-color:#FFDB58 ;
