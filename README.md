@@ -9,6 +9,7 @@ JavaScript
 
 ## Approach Taken
 ## Unsolved Problems:
+the first color is showing up as a number, pobably getting a randon number before the color
 player 1 not changing
 win lose condition not set
 

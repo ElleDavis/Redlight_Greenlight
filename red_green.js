@@ -17,20 +17,20 @@ let circle=document.getElementById("c1")
 // console.log(currentPlayer)
 
 //set player function to change
-function setPlayer(){
+// function setPlayer(){
 
-    let currentPlayer=document.getElementById("currentPlayer")
-currentPlayer.innerHTML=1
-console.log(currentPlayer)
+// let currentPlayer=document.getElementById("currentPlayer")
+// currentPlayer.innerHTML=1
+// console.log(currentPlayer)
 
-    if ( currentPlayer.innerHTML=1 && speedTix.textContent <= 3){
-        // console.log(currentPlayer.innerHTML=1)
-        console.log("monday")
-    } else if (currentPlayer=1 && speedTix >= 3){
-    //    console.log(currentPlayer.innerHTML= 2)
-        console.log("tuesday")
-     } else { alert("somethings off")}
-    }
+//     if ( currentPlayer.innerHTML=1 && speedTix.textContent <= 3){
+//         // console.log(currentPlayer.innerHTML=1)
+//         console.log("monday")
+//     } else if (currentPlayer=1 && speedTix >= 3){
+//     //    console.log(currentPlayer.innerHTML= 2)
+//         console.log("tuesday")
+//      } else { alert("somethings off")}
+//     }
 
 
 //Go Button open the scoreboard(point & tix) | start color in Intervals
@@ -52,8 +52,39 @@ function goPressed(){
 
 
 //add 1 to score and tix when clicked | add 1 to score when c1= green| add 1 to tix when not green |
+//stats player one and changes player 2| keep both player 1 and 2 scores | show winner
+// works perf
+//function greenPressed(){
+//     let currentPlayer=document.getElementById("currentPlayer")
+//     currentPlayer.innerHTML=1
+//     console.log(currentPlayer)
+
+//       if(speedingTicket.innerHTML=== "3"){
+//         alert(currentPlayer.innerHTML="Player 2")
+//         console.log(currentPlayer)
+
+//       } else if ( c1.textContent ===`${"green"}`){
+//             let total=document.getElementById("add")
+//             total.textContent = Number(total.textContent) +1  
+//             console.log("hello")
+//         } else {
+//             let speedTix=document.getElementById("speedingTicket")
+//              speedTix.textContent= Number(speedTix.textContent) +1
+//              console.log("bye");
+//         }
+//     }          
+
+
 function greenPressed(){
-        if ( c1.textContent ===`${"green"}`){
+    let currentPlayer=document.getElementById("currentPlayer")
+    currentPlayer.innerHTML=1
+    console.log(currentPlayer)
+
+      if(speedingTicket.innerHTML=== "3"){
+        alert(currentPlayer.innerHTML="Player 2")
+        console.log(currentPlayer)
+
+      } else if ( c1.textContent ===`${"green"}`){
             let total=document.getElementById("add")
             total.textContent = Number(total.textContent) +1  
             console.log("hello")
@@ -62,7 +93,8 @@ function greenPressed(){
              speedTix.textContent= Number(speedTix.textContent) +1
              console.log("bye");
         }
-            }
+    } 
+
 
 //Reset Button
 function resetPressed(){
