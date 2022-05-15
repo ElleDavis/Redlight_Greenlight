@@ -9,43 +9,60 @@ const colors=[
 
 // get random color
 let colorArray=colors[Math.floor(Math.random()* colors.length)]
-// console.log(colorArray)
+let circle=document.getElementById("c1")
 
-//set player 1
-const displayCurrentPlayer=document.querySelector("#currentPlayer")
-let currentPlayer=1 
-if (currentPlayer ==1){   
-}
+//set player 
+// let currentPlayer=document.getElementById("currentPlayer")
+// currentPlayer.innerHTML=1
+// console.log(currentPlayer)
 
-//Go Button open the scoreboard(point & tix) | start Interval 
+//set player function to change
+function setPlayer(){
+
+    let currentPlayer=document.getElementById("currentPlayer")
+currentPlayer.innerHTML=1
+console.log(currentPlayer)
+
+    if ( currentPlayer.innerHTML=1 && speedTix.textContent <= 3){
+        // console.log(currentPlayer.innerHTML=1)
+        console.log("monday")
+    } else if (currentPlayer=1 && speedTix >= 3){
+    //    console.log(currentPlayer.innerHTML= 2)
+        console.log("tuesday")
+     } else { alert("somethings off")}
+    }
+
+
+//Go Button open the scoreboard(point & tix) | start color in Intervals
 function goPressed(){
-   let colorArray=setInterval(function(){c1.innerHTML =`${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
-   c1.textContent=`${colorArray}`
-   //Scoreboard opens when go is clicked
-    let totalScore =document.querySelector("#add")
-    // totalScore.textContent=`${addButton}`;
-    totalScore.textContent="score"
-     //Speeding tix opens when go is clicked
+    let colorArray=setInterval(function(){c1.textContent =`${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
+//let colorArray=setInterval(function(){ c1= `${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
+    c1.textContent=`${colorArray}`
+
+//Scoreboard opens when go is clicked
+    let totalScore=document.querySelector("#add")
+    // totalScore.textContent="score:"
+    totalScore="score:"
+
+//Speeding tix opens when go is clicked
     let speedingTicket=document.querySelector("#speedingTicket")
-    speedingTicket.textContent="speeding Tickets:"
-    // speedingTicket.textContent=`${speedingTicket}`
-    console.log("starting game")
+    // speedingTicket.textContent="speeding Tickets:"
+    speedingTicket="speeding Tickets:"
 }
 
-//add 1 when clicked | add to score when c1= green| add x to tix is not green |
+
+//add 1 to score and tix when clicked | add 1 to score when c1= green| add 1 to tix when not green |
 function greenPressed(){
-    const total = document.getElementById('total')
-    total.textContent = Number(total.textContent) + 1
-
-    const speedTix=document.getElementById("speedingTicket")
-    speedTix.textContent= Number(speedTix.textContent) + 1
-
-    if (c1.textContent==="green"){
-    total++} else {tix++}
-    console.log(total);
-//     // console.log(total.textContent);
-//     total.textContent = Number(total.textContent) + 1
- }
+        if ( c1.textContent ===`${"green"}`){
+            let total=document.getElementById("add")
+            total.textContent = Number(total.textContent) +1  
+            console.log("hello")
+        } else {
+            let speedTix=document.getElementById("speedingTicket")
+             speedTix.textContent= Number(speedTix.textContent) +1
+             console.log("bye");
+        }
+            }
 
 //Reset Button
 function resetPressed(){
@@ -53,13 +70,16 @@ function resetPressed(){
     const reset = document.getElementById('reset')
     // if statement to add player 2 score |or| clear both player 1 & player 2 when is done
     c1.textContent=""
-    total.textContent=""
+    add.textContent=""
     speedingTicket.textContent=""
     console.log("resetting game")
 }
 
 
 // EVENTS
+//Set player
+    const displayCurrentPlayer=document.querySelector("#currentPlayer")
+    displayCurrentPlayer.addEventListener("check", setPlayer)
 
 // click green button and add piont if circle is green
     const greenButton=document.querySelector("#add")
@@ -77,7 +97,11 @@ function resetPressed(){
     console.log("go was clicked");
 
    
+//  works in scoreboard before the go but NaN after go
+//peedTix.textContent= Number(speedTix.textContent) + 1
 
+//only putting 1 in h2
+            // total.textContent = `${(total.textContent) + 1}`
 
     // //1. Create a new variable called 'total' and assign it the div with the id of 'total'
     // const total = document.getElementById('total')
