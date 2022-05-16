@@ -10,7 +10,7 @@ body{
 
 div{
     width: 300px;
-    border: 15px solid green;
+    /* border: 15px solid green; */
     padding: auto;
     margin: auto;
 }
@@ -29,7 +29,9 @@ div{
 }
 
 #go:hover{
-    background-color: green;
+    background-color: yellow; 
+    color:black;
+    animation:blink 200ms infinite alternate;
 }
 
 /* <img src="./redLight_Images/checkerboard.png" /> */
@@ -39,7 +41,7 @@ div{
 
 #lights, 
 #buttons{
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
     display: flex;
     align-content:space-around;
     justify-content: center;
