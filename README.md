@@ -1,6 +1,7 @@
 #RedLight_GreenLight 
 
 ## Wireframe:
+attached in Image folder
 
 ## Explanations of specific Technologies:
 Html
@@ -9,7 +10,7 @@ JavaScript
 
 ## Approach Taken
 ## Unsolved Problems:
-the first color is showing up as a number ,array probably getting a randon number before the color|win-lose condition not set
+The first color is showing up as a number as the array probably getting a randon number before the color| setting player 2 & rounds
 
 ## Link to Hosted Site: 
 https://elledavis.github.io/Redlight_Greenlight/

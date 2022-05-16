@@ -5,13 +5,8 @@ const colors=[
     "red",
     "green",
     "yellow",
-    c1.textContent=document.getElementById("c1").style.backgroundColor="green",
-    c1.textContent=document.getElementById("c1").style.backgroundColor="red",
-    c1.textContent=document.getElementById("c1").style.backgroundColor="yellow"
 ]
-// c1.textContent=document.getElementById("c1").style.backgroundColor="green"
-// c1.textContent=document.getElementById("c1").style.backgroundColor="red"
-// c1.textContent=document.getElementById("c1").style.backgroundColor="yellow"
+ 
 // get random color
 let colorArray=colors[Math.floor(Math.random()* colors.length)]
 let circle=document.getElementById("c1")
@@ -24,78 +19,51 @@ let circle=document.getElementById("c1")
 //Go Button open the scoreboard(point & tix) | start color in Intervals
 function goPressed(){
     let colorArray=setInterval(function(){c1.textContent =`${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
-//let colorArray=setInterval(function(){ c1= `${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
     c1.textContent=`${colorArray}`
 
 //Scoreboard opens when go is clicked
     let totalScore=document.querySelector("#add")
     // totalScore.textContent="score:"
     totalScore="score:"
-
+    
 //Speeding tix opens when go is clicked
     let speedingTicket=document.querySelector("#speedingTicket")
     // speedingTicket.textContent="speeding Tickets:"
     speedingTicket="speeding Tickets:"
-
 }
 
 
-
-//starts player one and changes player 2| keep both player 1 and 2 scores | show winner
- 
-
-//try switch case for color
-// switch (c1.innerHTML==="green"){
-//     case c1="green":
-//         document.getElementById("c1").style.backgroundColor="green"
-//         console.log('show green');
-//         break;
-//     case c1="red": 
-//     document.getElementById("c1").style.backgroundColor="red"
-//         console.log('show Red');
-//         break;
-//         case c1="yellow": 
-//         document.getElementById("c1").style.backgroundColor="yellow"
-//             console.log('show yellow');
-//             break;
-//     default:
-//         console.log('Not Found!');
-// }
-
-// let currentPlayer=document.getElementById("currentPlayer")
-// currentPlayer.innerHTML=1
-
-// function goPressed(){
-//     switch (c1.innerHTML){
-//         case c1.innerHTML="green":
-//             document.getElementById("c1").style.color="green"
-//             console.log('show green');
-//             break;
-//         case c1.textContent="red": 
-//         document.getElementById("c1").style.color="red"
-//             console.log('show Red');
-//             break;
-//             case c1.textContent="yellow": 
-//             document.getElementById("c1").style.color="yellow"
-//                 console.log('show yellow');
-//                 break;
-//         default:
-//             console.log('Not Found!');
-//     }
-
-// }
-
-
 //add 1 to score and tix when clicked | add 1 to score when c1= green| add 1 to tix when not green |
-//starts player 1 & changes to player 2|reset points and tix and add for player two but no stop
+//starts player 1 & changes to player 2|reset points and tix and add for player 2 but no stop  | show winner
 function greenPressed(){
 let currentPlayer=document.getElementById("currentPlayer")
 currentPlayer.innerHTML=1
 
-if(speedingTicket.innerHTML=== "3"){
+// //try switch case for color| shows background color but not on the right color
+// switch (c1.innerHTML){
+//             case c1.innerHTML="green":
+//                 document.getElementById("c1").style.backgroundColor="green"
+//                 console.log('show green');
+//                 break;
+//             case c1.innerHTML="red": 
+//             document.getElementById("c1").style.backgroundColor="red"
+//                 console.log('show Red');
+//                 break;
+//                 case c1.innerHTML="yellow": 
+//                 document.getElementById("c1").style.backgroundColor="yellow"
+//                     console.log('show yellow');
+//                     break;
+//             default:
+//                 console.log('Not Found!');
+//         }
+
+if (speedingTicket.innerHTML >= "3"){
     add.textContent=""
     speedingTicket.textContent=""
-    alert(currentPlayer.innerHTML="Ready Player 2 ")
+    alert("LOSER, Try Again!")
+    (currentPlayer.innerHTML="Ready Player 2")
+}else if (add.innerHTML==="3" ){
+    alert("WINNER")
 } else if ( c1.textContent ===`${"green"}`){
     let total=document.getElementById("add")
     total.textContent = Number(total.textContent) +1  
@@ -106,7 +74,6 @@ if(speedingTicket.innerHTML=== "3"){
     console.log("bye")
 } 
     }
-
 
 //Reset Button
 function resetPressed(){

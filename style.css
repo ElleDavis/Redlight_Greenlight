@@ -65,8 +65,8 @@ div{
 
 .circle {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 60%;
+    height: 60%;
     /* background-color: blueviolet; */
     animation:blink 200ms infinite alternate;
 }
