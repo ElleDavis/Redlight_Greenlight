@@ -80,20 +80,29 @@ function greenPressed(){
     currentPlayer.innerHTML=1
     console.log(currentPlayer)
 
-      if(speedingTicket.innerHTML=== "3"){
-        alert(currentPlayer.innerHTML="Player 2")
+    if(speedingTicket.innerHTML=== "3"){
+        add.textContent=""
+        speedingTicket.textContent=""
+        alert(currentPlayer.innerHTML="Ready Player 2 ")
         console.log(currentPlayer)
-
-      } else if ( c1.textContent ===`${"green"}`){
+    } else if( currentPlayer.innerHTML="Player 2" && c1.textContent ===`${"green"}`){
+        let total=document.getElementById("add")
+        total.textContent = Number(total.textContent) +1  
+        console.log("hello2")
+    } else if(currentPlayer.innerHTML="Player 2" && c1.textContent !==`${"green"}` ){
+        let speedTix=document.getElementById("speedingTicket")
+         speedTix.textContent= Number(speedTix.textContent) +1
+         console.log("bye2");
+    } else if ( c1.textContent ===`${"green"}`){
             let total=document.getElementById("add")
             total.textContent = Number(total.textContent) +1  
             console.log("hello")
-        } else {
+    } else if (c1.textContent !==`${"green"}`){
             let speedTix=document.getElementById("speedingTicket")
              speedTix.textContent= Number(speedTix.textContent) +1
-             console.log("bye");
+             console.log("bye")}
         }
-    } 
+    
 
 
 //Reset Button
@@ -128,42 +137,4 @@ function resetPressed(){
     goButton.addEventListener("click",goPressed)
     console.log("go was clicked");
 
-   
-//  works in scoreboard before the go but NaN after go
-//peedTix.textContent= Number(speedTix.textContent) + 1
-
-//only putting 1 in h2
-            // total.textContent = `${(total.textContent) + 1}`
-
-    // //1. Create a new variable called 'total' and assign it the div with the id of 'total'
-    // const total = document.getElementById('total')
-    // console.log(total);
-    // console.log(total.textContent);
-
-    //2. Create add Function
-
-    // function add() {
-    // //update the value of the total variable textContent
-    // //total.textContent++
-    // total.textContent = Number(total.textContent) + 1
-    //      }
-
-  
-//add points to scorboard when circle clicked on green Scores ++, when clicked on anything else speading ticket++
- //shows score by connecting counter to buttonclick
-    // function counter(){
-    // // if (`${(colors[Math.floor(Math.random()* colors.length)])}` === colors['green']){
-    //     if(c1.innerHTML === colors['green']){  
-    //  value +=1
-    // pointContainer.textContent= Number(value) +1
-    // } else {speedingTicket += "X"}
-    //  console.log(colors[Math.floor(Math.random()* colors.length)])
-    // }
-
-//start Player2 starts when player 1 gets 3 speeding tickets
-    // if(speedingTicket ==="XXX"){alert(Player 2 start) }
-
-
-    // if (goPressed ){
-    //     setInterval(function(){c1.innerHTML +=`${(colors[Math.floor(Math.random()* colors.length)])}`}, 2000);
-    // } else {alert ("game started")}
+ 
